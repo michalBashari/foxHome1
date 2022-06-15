@@ -1,0 +1,109 @@
+<!-- <body>
+  <img src="../../../assets/product/s.jpg" style="width: 3%;height: 10%;">
+    <br>    
+    <div class="container" >
+        <div class="row" style="width:100% " >
+          <div class="col-md-4"  *ngFor="let i of servShop.myListShoping" >
+            <div class="thumbnail">
+                <h3 style="text-align: right; font-family: sans-serif;"> {{i.id}}</h3>                 
+                <h3 style="text-align: right; font-family: sans-serif;"> {{i.name}} </h3> 
+                 <button class="btn btn-outline-secondary" (click)="add(i.id)" >+</button> <strong> {{ i.amount }} </strong> -->
+                 <!-- <button class="btn btn-outline-secondary" (click)="decrease(i.id)">-</button> -->
+                <!-- <div class="caption">    
+                    <p style="font-family: cursive;" >₪{{i.price}} :מחיר ליחידה</p> </div>
+                    </div>
+        </div>
+        </div>
+        -->
+          <!-- <p style="font-family: cursive;" >₪{{sum}} :מחיר סופי</p>          
+          <button type="button" class="btn btn-primary btn-block" (click)="finsh()" style="background-color: pink;">לסיום הקניה</button>
+          <button type="button" (click)="finsh()" class="btn btn-outline-secondary" data-toggle="modal"  data-target="#myModal">
+            העברה לתשלום
+          </button>
+        
+</div>
+
+</body> -->
+
+<body>
+
+  
+   <table class="table">
+     <thead class="table-success">
+       <tr>
+           <th>קוד פריט</th>
+           <th>שם פריט</th>
+           <th>כמות</th>
+           <!-- <th></th> -->
+           <th>מחיר ליחידה</th>
+           
+           
+           <!-- <th></th> -->
+       </tr>
+     </thead>
+     <tbody>
+      <tr *ngFor="let i of servShop.myListShoping">
+          <td style="text-align: left ; font-family: sans-serif;"> {{i.id}}</td>
+          <td style="text-align: left; font-family: sans-serif;"> {{i.name}} </td>
+          <td><button class="btn btn-outline-secondary" (click)="add(i.id)" >+</button> <strong> {{ i.amount }} </strong> 
+             <button class="btn btn-outline-secondary" (click)="decrease(i.id)">-</button> </td>
+          
+          <td> <p style="font-family: cursive;" >₪{{i.price}} </p></td>
+          <!-- <td><img src="https://localhost:44322/pictuers/{{i.image}}.jpg" class="img-thumbnail" alt="Cinque Terre" width="100" height="100"> -->
+       <!-- </td> -->
+       <!-- <td><button class="btn btn-outline-secondary" (click)="delete(i.id)"> מחיקת פריט </button></td> -->
+       <!-- <td><button  class="btn btn-outline-secondary" (click)="update(i)"> עדכון פריט </button></td> -->
+       </tr>
+     </tbody>
+   </table>
+
+  
+  
+  
+  </body>
+  <div style="margin-left: 38%;">
+  <h1 style="font-family: cursive;" >₪{{sum}} :מחיר סופי</h1> 
+  <button type="button" (click)="finsh()" class="btn btn-outline-secondary" data-toggle="modal"  data-target="#myModal">
+    העברה לתשלום
+  </button>
+</div>
+<br/><br/><br/><br/><br/><br/>
+<body *ngIf="is">
+    <div>
+        <div class="container">
+          <h2>FoxHome</h2>
+          <form class="form-horizontal" >
+            <div class="form-group">
+              <label class="control-label col-sm-2" >name:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name"  [(ngModel)]="i.name" placeholder="Enter name" name="name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd">Password:</label>
+              <div class="col-sm-10">          
+                <input type="password" class="form-control" id="pwd" [(ngModel)]="i.password"  placeholder="Enter password" name="password">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd">number card:</label>
+              <div class="col-sm-10">          
+                <input type="password" class="form-control" id="pwd" [(ngModel)]="i.creditCardDetails" placeholder="Enter number card " name="creditCardDetails">
+              </div>
+            </div>
+                <button type="submit" class="btn btn-outline-secondary" (click)="finsh1()">סיום קניה</button>
+              <body>
+                <div class="container mt-3">
+                  <div class="alert alert-success" *ngIf="isPuy">
+                    <strong>הקניה הושלמה בהצלחה!!</strong> תודה רבה שמחנו לעמוד לשרותכם
+                  </div>              
+                  <div class="alert alert-danger" *ngIf="isPuy2">
+                    <strong>שגיאה! אחד מהפרטים לא נכונים!</strong>  אנא הכנס שוב 
+                  </div>             
+                </div>            
+                </body>            
+          </form>
+        </div>
+      </div>
+        </body>
+       
