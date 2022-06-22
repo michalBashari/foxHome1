@@ -1,0 +1,7 @@
+<p>guardians works!</p>
+<h1>שלום נא הכנס נתונים</h1>
+<input type="text" placeholder="הכנס תז" [(ngModel)]="myGuardians.tz" name="name"/>
+<button (click)="ok()">אישור</button>
+
+<p *ngIf="isFound">{{Guardians.firsName}}</p>
+

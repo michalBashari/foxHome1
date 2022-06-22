@@ -1,0 +1,31 @@
+<body>
+
+    <div class="container mt-3">
+     <table class="table table-striped">
+       <thead>
+         <tr>
+           <th>id</th>
+           <th>name</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let i of myListCategory">
+           <td>{{i.id}}</td>
+           <td>{{i.name}}</td>
+           <td><button (click)="delete(i.id)" class="btn btn-outline-secondary">מחיקת קטגוריה</button></td>
+           <td><button (click)="update(i)" class="btn btn-outline-secondary">עדכון קטגוריה</button></td>
+        </tr>
+       </tbody>
+     </table>
+     <form style="margin-left: 25%;margin-right: 25%;">
+        <div class="form-group row">
+          <div class="col-xs-3">
+            <label for="ex2">הכנס שם</label>
+            <input class="form-control" [(ngModel)]="c.name" name=name type="text">
+          </div>
+          <button type="button" class="btn" (click)="ok()">אישור</button>
+        </div>
+      </form>
+    </div>
+    
+    </body>

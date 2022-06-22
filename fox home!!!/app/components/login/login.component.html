@@ -1,0 +1,47 @@
+
+<body *ngIf="!find" style="margin-left: 25%;">
+  <h2>😄😄הצטרף לרשימת לקוחותינו המרוצים😄😄</h2>
+<div style="color: rgb(238, 176, 33);">
+    <div class="container">
+      <h2>FoxHome</h2>
+      <form class="form-horizontal" >
+        <div class="form-group">
+          <label class="control-label col-sm-2" >name:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name"  [(ngModel)]="i.name" placeholder="Enter name" name="name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">Password:</label>
+          <div class="col-sm-10">          
+            <input type="password" class="form-control" id="pwd" [(ngModel)]="i.password" placeholder="Enter password" name="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">number card:</label>
+          <div class="col-sm-10">          
+            <input type="password" class="form-control" id="pwd" [(ngModel)]="i.creditCardDetails" placeholder="Enter number card " name="creditCardDetails">
+          </div>
+        </div>
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-outline-secondary" (click)="ok()" >Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+    </body>
+    <div class="container mt-3">
+      <div class="alert alert-warning"  *ngIf="!good">
+        <strong> אחד מהפרטים שגוי</strong>
+      </div>
+    <div class="container mt-3" *ngIf="good">
+      <div class="alert alert-info">
+        <strong style="text-align: center;"><a class="btn btn-outline-secondary" routerLink="/Home">להמשך קניה באתר</a>😍😍😍😍😍😍!!תודה שהצטרפת אלינו😍😍😍😍😍😍</strong>
+      </div>
+    <router-outlet></router-outlet>
+    <div class="container mt-3" *ngIf="find">
+      <div class="alert alert-success">
+        <strong>שלום ל:{{i.name}}הנך רשום במערכת <a class="btn btn-outline-secondary" routerLink="/Home">להמשך קניה באתר</a></strong>
+      </div>     

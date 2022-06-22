@@ -1,0 +1,18 @@
+<div class="ddd" *ngIf="isFound==false">
+
+
+<br><br><br><br><br><br><br><h1>שלום נא הכנס נתונים</h1>
+<!-- <button *ngIf="isFound">יציאה</button>
+<button *ngIf="isFound">חזרה</button> -->
+
+<body>    
+    <div>
+      <form action="/action_page.php">
+        <input type="text" id="fname" name="name" [(ngModel)]="myShelter.firsName" placeholder="שם פרטי">  <br> 
+        <input type="text" id="lname" name="number"  [(ngModel)]="myShelter.tz" placeholder="מ.זהות"> <br>     
+        <input type="submit" value="Submit" (click)="ok()" >
+      </form>
+    </div>    
+</body>
+<p *ngIf="isFound==false">אינך רשום😒😒😒😒 {{Shelter.firsName}}</p></div>
+<router-outlet></router-outlet>
