@@ -12,4 +12,7 @@ export class ExitsService {
   myGetAll():Observable<Array<Exits>>{
     return this.http.get<Array<Exits>>(`${this.url}/getAll`)
   }
+  MyUpdate(e:Exits):Observable<Array<Exits>>{
+    return this.http.post<Array<Exits>>(`${this.url}/update`,e)
+            }
 }

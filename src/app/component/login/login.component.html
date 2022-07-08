@@ -1,4 +1,4 @@
-<div class="ddd" *ngIf="isFound==false">
+<div class="ddd" *ngIf="!isFound">
 
 
 <br><br><br><br><br><br><br><h1>שלום נא הכנס נתונים</h1>
@@ -14,5 +14,5 @@
       </form>
     </div>    
 </body>
-<p *ngIf="isFound==false">אינך רשום😒😒😒😒 {{Shelter.firsName}}</p></div>
+<h4 *ngIf="isFound1">😒😒אינך רשום או שאחד הפרטים שגויים</h4></div>
 <router-outlet></router-outlet>

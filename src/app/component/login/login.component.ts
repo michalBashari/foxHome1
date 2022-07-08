@@ -12,11 +12,14 @@ export class LoginComponent implements OnInit {
   myShelter: Shelter = new Shelter();
   Shelter: Shelter = new Shelter();
   isFound: boolean = false;
+  isFound1: boolean = false;
+
   constructor(public myShelterService: ShelterService,public router:Router) { }
 
   ngOnInit(): void {
   }
   ok() {
+    this.isFound1 = true;
     debugger
     this.myShelterService.MyGetByTz(this.myShelter.tz).subscribe(x => {
       debugger
@@ -27,8 +30,9 @@ export class LoginComponent implements OnInit {
       if (this.Shelter != undefined){
         this.router.navigate(['/HomeShelter'])
         this.isFound = true;}
-      else
+      else{
         this.isFound = false;
+        this.isFound1 = true;}
     }
       , err => "nnoo")
 
